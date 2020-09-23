@@ -20,7 +20,7 @@ namespace My {
 
         public void Push(float value) { throw new Exception(); }
         public float Pop() { throw new Exception(); }
-        public float Back() { throw new Exception(); }
+        public float Peek() { throw new Exception(); }
 
         public override bool Equals(object obj) { throw new Exception(); }
 

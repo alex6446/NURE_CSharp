@@ -21,34 +21,34 @@ namespace MyTest {
         }
 
         [TestMethod]
-        public void Push_Number_Equals_Back () {
+        public void Push_Number_Equals_Peek () {
             // Arrange
             float number = 1.5f;
             float expected = 1.5f;
             Stack s = new Stack();
             // Act
             s.Push(number);
-            float actual = s.Back();
+            float actual = s.Peek();
             // Assert
-            Assert.AreEqual(expected, actual, 0.0001, "Push Back values doesn't match");
+            Assert.AreEqual(expected, actual, 0.0001, "Push Peek values doesn't match");
         }
 
         [TestMethod]
-        public void Pop_Empty_Stack_Should_Throw_Exception () {
+        public void Pop_Empty_Stack_Should_Throw_NullReferenceException() {
             // Arrange
             Stack s = new Stack();
 
             //Act and Assert
-            Assert.ThrowsException<System.Exception>(() => s.Pop());
+            Assert.ThrowsException<System.NullReferenceException>(() => s.Pop());
         }
 
         [TestMethod]
-        public void Back_Empty_Stack_Should_Throw_Exception() {
+        public void Peek_Empty_Stack_Should_Throw_NullReferenceException() {
             // Arrange
             Stack s = new Stack();
 
             //Act and Assert
-            Assert.ThrowsException<System.Exception>(() => s.Back());
+            Assert.ThrowsException<System.NullReferenceException>(() => s.Peek());
         }
 
         [TestMethod]
@@ -67,7 +67,7 @@ namespace MyTest {
         }
 
         [TestMethod]
-        public void Back_Full_Stack_Should_Not_Remove_Element() {
+        public void Peek_Full_Stack_Should_Not_Remove_Element() {
             // Arrange
             float expected = 1.5f;
             Stack s = new Stack();
@@ -75,10 +75,10 @@ namespace MyTest {
             s.Push(1.2f);
             s.Push(1.5f);
             // Act
-            s.Back();
-            float actual = s.Back();
+            s.Peek();
+            float actual = s.Peek();
             // Assert
-            Assert.AreEqual(expected, actual, 0.0001, "Back removes element");
+            Assert.AreEqual(expected, actual, 0.0001, "Peek removes element");
         }
 
         [TestMethod]
