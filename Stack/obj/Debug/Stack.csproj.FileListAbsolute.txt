@@ -5,3 +5,10 @@ C:\Users\Xiaomi\Desktop\NURE\ШарпЫ\39_Stack_Tests\Stack\obj\Debug\Stack.csp
 C:\Users\Xiaomi\Desktop\NURE\ШарпЫ\39_Stack_Tests\Stack\obj\Debug\Stack.csproj.CoreCompileInputs.cache
 C:\Users\Xiaomi\Desktop\NURE\ШарпЫ\39_Stack_Tests\Stack\obj\Debug\Stack.exe
 C:\Users\Xiaomi\Desktop\NURE\ШарпЫ\39_Stack_Tests\Stack\obj\Debug\Stack.pdb
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\bin\Debug\Stack.exe.config
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\bin\Debug\Stack.exe
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\bin\Debug\Stack.pdb
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\obj\Debug\Stack.csprojAssemblyReference.cache
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\obj\Debug\Stack.csproj.CoreCompileInputs.cache
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\obj\Debug\Stack.exe
+C:\Users\Xiaomi\Desktop\NURE\Csharp\39_Stack_Tests\Stack\obj\Debug\Stack.pdb

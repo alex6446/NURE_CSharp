@@ -154,7 +154,7 @@ namespace MyTest {
             Stack s = new Stack(arr);
             // Act
             bool actual = true;
-            for (int i = 0; i < arr.Length; ++i)
+            for (int i = arr.Length-1; i >= 0; --i)
                 if (arr[i] != s.Pop())
                     actual = false;
             // Assert
