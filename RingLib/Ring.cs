@@ -155,17 +155,15 @@ namespace RingLib
 
         public override string ToString()
         {
-            var sb = new System.Text.StringBuilder();
+            string s = "{ ";
             Node t = Begin;
-            sb.Append("{ ");
             do {
-                sb.Append(t.Data.ToString());
-                sb.Append(", ");
+                s += $"{t.Data}, ";
                 t = t.Next;
             } while (t != Begin);
-            sb.Length -= 2;
-            sb.Append(" }");
-            return sb.ToString();
+            s = s.Remove(s.Length-2);
+            s += " }";
+            return s;
         }
 
         public override bool Equals(object obj) {

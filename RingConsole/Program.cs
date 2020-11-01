@@ -7,7 +7,6 @@ namespace RingConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             Ring<int> a = new Ring<int>();
             int n;
             n = a < 3;
