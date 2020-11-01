@@ -7,7 +7,7 @@ namespace RingConsole
     {
         static void Main(string[] args)
         {
-            Ring<int> a = new Ring<int>();
+            Ring a = new Ring();
             int n;
             n = a < 3;
             n = a < 4;
@@ -17,20 +17,20 @@ namespace RingConsole
             n = a > n;
             Console.WriteLine(n);
 
-            Ring<int> b = new Ring<int>(a);
+            Ring b = new Ring(a);
             n = a > n;
             n = b > n;
             Console.WriteLine(n);
 
-            Ring<int> c = new Ring<int>(new int[6]{1, 2, 3, 4, 5, 6});
+            Ring c = new Ring(new int[6]{1, 2, 3, 4, 5, 6});
             n = c > n;
             Console.WriteLine(n);
 
-            Ring<int> d = new Ring<int>();
+            Ring d = new Ring();
             d.Input();
             Console.WriteLine(d);
 
-            Ring<int> e = new Ring<int>(d);
+            Ring e = new Ring(d);
             Console.WriteLine(e);
             Console.WriteLine(e == d);
             Console.WriteLine(a != e);
@@ -53,7 +53,7 @@ namespace RingConsole
             Console.WriteLine(" ");
 
             int[] arr2 = {13, 12, 16};
-            Console.WriteLine((Ring<int>)arr2);
+            Console.WriteLine((Ring)arr2);
 
         }
     }

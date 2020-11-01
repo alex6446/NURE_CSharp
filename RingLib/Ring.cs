@@ -3,11 +3,11 @@
 namespace RingLib
 {
 
-    public class Ring<T>
+    public class Ring
     {
         private class Node
         {
-            public T Data {get; set;}
+            public int Data {get; set;}
             public Node Next {get; set;}
             public Node Prev {get; set;}
         }
@@ -17,7 +17,7 @@ namespace RingLib
         {
         }
 
-        public Ring(Ring<T> copy)
+        public Ring(Ring copy)
         {
             if (copy.Begin == null)
                 return;
@@ -38,7 +38,7 @@ namespace RingLib
             }
         }
 
-        public Ring(T[] a)
+        public Ring(int[] a)
         {
             if (a.Length == 0)
                 return;
@@ -57,16 +57,16 @@ namespace RingLib
             }
         }
 
-        public static explicit operator Ring<T>(T[] a)
+        public static explicit operator Ring(int[] a)
         {
-            Ring<T> r = new Ring<T>(a);
+            Ring r = new Ring(a);
             return r;
         }
 
-        public static explicit operator T[](Ring<T> r)
+        public static explicit operator int[](Ring r)
         {
             int N = r.Size();
-            T[] a = new T[N];
+            int[] a = new int[N];
             Node t = r.Begin;
             for (int i = 0; i < N; i++) {
                 a[i] = t.Data;
@@ -88,14 +88,14 @@ namespace RingLib
             return size;
         }
 
-        public T Peek()
+        public int Peek()
         {
             if (Begin == null)
                 throw new NullReferenceException();
             return Begin.Data;
         }
 
-        public static T operator<(Ring<T> r, T n)
+        public static int operator<(Ring r, int n)
         {
             Node t = new Node();
             t.Data = n;
@@ -112,11 +112,11 @@ namespace RingLib
             return n;
         }
 
-        public static T operator>(Ring<T> r, T n)
+        public static int operator>(Ring r, int n)
         {
             if (r.Begin == null)
                 throw new NullReferenceException();
-            T res = r.Begin.Data;
+            int res = r.Begin.Data;
             if (r.Begin == r.Begin.Next) {
                 r.Begin = null;
             } else {
@@ -127,7 +127,7 @@ namespace RingLib
             return res;
         }
 
-        public static Ring<T> operator++(Ring<T> r)
+        public static Ring operator++(Ring r)
         {
             if (r.Begin == null)
                 throw new NullReferenceException();
@@ -135,7 +135,7 @@ namespace RingLib
             return r;
         }
 
-        public static Ring<T> operator--(Ring<T> r)
+        public static Ring operator--(Ring r)
         {
             if (r.Begin == null)
                 throw new NullReferenceException();
@@ -146,9 +146,9 @@ namespace RingLib
         public void Input()
         {
             int N = int.Parse(Console.ReadLine());
-            T n;
+            int n;
             for (int i = 0; i < N; i++) {
-                n = (T)Convert.ChangeType(Console.ReadLine(), typeof(T));
+                n = (int)Convert.ChangeType(Console.ReadLine(), typeof(int));
                 n = this < n;
             }
         }
@@ -169,7 +169,7 @@ namespace RingLib
         public override bool Equals(object obj) {
             if (obj == null || GetType() != obj.GetType())
                 return false;
-            Ring<T> r = (Ring<T>)obj;
+            Ring r = (Ring)obj;
             Node tnode = Begin;
             Node rnode = r.Begin;
             if (tnode == null || rnode == null)
@@ -190,7 +190,7 @@ namespace RingLib
             return base.GetHashCode();
         }
 
-        public T this[int i]
+        public int this[int i]
         {
             get
             {
@@ -212,22 +212,22 @@ namespace RingLib
             }
         }
 
-        public static bool operator==(Ring<T> a, Ring<T> b)
+        public static bool operator==(Ring a, Ring b)
         {
             return Equals(a, b);
         }
 
-        public static bool operator!=(Ring<T> a, Ring<T> b)
+        public static bool operator!=(Ring a, Ring b)
         {
             return !Equals(a, b);
         }
 
-        public static bool operator true(Ring<T> r)
+        public static bool operator true(Ring r)
         {
             return r.Begin != null;
         }
 
-        public static bool operator false(Ring<T> r)
+        public static bool operator false(Ring r)
         {
             return r.Begin == null;
         }
