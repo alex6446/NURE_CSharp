@@ -47,7 +47,7 @@ namespace RingConsole
 
             Console.WriteLine("size of e is {0}", e.Size());
 
-            int[] arr = (int[])e;
+            int[] arr = e;
             foreach (var i in arr)
                 Console.Write("{0} ", i);
             Console.WriteLine(" ");

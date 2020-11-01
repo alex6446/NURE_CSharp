@@ -63,7 +63,7 @@ namespace RingLib
             return r;
         }
 
-        public static explicit operator int[](Ring r)
+        public static implicit operator int[](Ring r)
         {
             int N = r.Size();
             int[] a = new int[N];
