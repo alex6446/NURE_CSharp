@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\RingLib\RingLib.csproj" />
+    <Reference Include="RingLib">
+        <HintPath>..\RingLib\bin\Debug\netstandard2.0\RingLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <PropertyGroup>

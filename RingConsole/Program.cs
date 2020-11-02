@@ -16,6 +16,8 @@ namespace RingConsole
             a--;
             n = a > n;
             Console.WriteLine(n);
+            n = a >> n;
+            Console.WriteLine(n);
 
             Ring b = new Ring(a);
             n = a > n;

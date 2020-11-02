@@ -88,11 +88,11 @@ namespace RingLib
             return size;
         }
 
-        public int Peek()
+        public static int operator>>(Ring r, int n)
         {
-            if (Begin == null)
+            if (r.Begin == null)
                 throw new NullReferenceException();
-            return Begin.Data;
+            return r.Begin.Data;
         }
 
         public static int operator<(Ring r, int n)
