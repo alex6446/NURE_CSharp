@@ -50,7 +50,7 @@ namespace GraphFileManager {
             nodes = new IGraphComponent[N];
             int index = 0;
             for (int i = 0; i < files.Length; ++i, ++index) {
-                Vector2 pos = (new Vector2((float)Math.Cos(step*(index+1) + angle), (float)Math.Sin(step*(index+1) + angle))) * 200 + Position;
+                Vector2 pos = (new Vector2((float)Math.Cos(step*(index+1) + angle), (float)Math.Sin(step*(index+1) + angle))) * (files.Length * 15 + 50) + Position;
                 nodes[index] = new GraphLeaf(new FSFile(files[i]), pos);
             }
             for (int i = 0; i < folders.Length; ++i, ++index) {
