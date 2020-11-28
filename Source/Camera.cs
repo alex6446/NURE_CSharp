@@ -135,18 +135,13 @@ namespace GraphFileManager
 
             if (currentMouseWheelValue > previousMouseWheelValue) {
                 AdjustZoom(.1f);
-                Console.WriteLine(moveSpeed);
             }
             if (currentMouseWheelValue < previousMouseWheelValue) {
                 AdjustZoom(-.1f);
-                Console.WriteLine(moveSpeed);
             }
 
             previousZoom = zoom;
             zoom = Zoom;
-            if (previousZoom != zoom) {
-                Console.WriteLine(zoom);
-            }
 
             MoveCamera(cameraMovement);
         }

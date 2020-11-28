@@ -31,7 +31,6 @@ namespace GraphFileManager {
             textOrigin = new Vector2(GraphFileManager.Font.MeasureString(fso.Name).X / 2f, 0);
             lineColor = Color.Gray;
             iconColor = depth == 0 ? Color.Blue : Color.White;
-            Console.WriteLine(fso.Path);
             icon = GraphFileManager.SContent.Load<Texture2D>("Textures/folder");
             textOrigin.Y = -icon.Height/2f*0.08f;
             iconOrigin = new Vector2(icon.Width * 0.5f, icon.Height * 0.5f);
